@@ -1,5 +1,5 @@
-numpy
-pandas
-streamlit
-ydata-profiling
-streamlit-pandas-profiling
+numpy==1.26.4
+pandas==2.2.2
+streamlit==1.33.0
+ydata-profiling==4.7.0
+streamlit-pandas-profiling==0.1.3
