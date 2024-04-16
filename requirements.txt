@@ -2,5 +2,5 @@ numpy
 pandas
 streamlit
 ydata-profiling==4.7.0
-pandas-profiling=3.6.6
+pandas-profiling==3.6.6
 visions==0.7.6
