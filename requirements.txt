@@ -1,6 +1,5 @@
-Jinja2
 numpy
 pandas
 streamlit
 ydata-profiling
-pandas-profiling==3.5.0
+pandas-profiling
