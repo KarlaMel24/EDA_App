@@ -3,4 +3,4 @@ numpy
 pandas
 streamlit
 ydata-profiling
-streamlit-pandas-profiling
+streamlit-pandas-profiling=3.5.0
