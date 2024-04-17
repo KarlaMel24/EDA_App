@@ -1,14 +1,15 @@
 # Credits: This code was inspired by Data Professor (http://youtube.com/dataprofessor)
+# It has changes, specially with the packages
+
 import numpy as np
 import pandas as pd
 import streamlit as st
+import pyarrow
 from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
+from streamlit_ydata_profiling import st_profile_report
 
 # Title and information of the App
 st.markdown('''
-     # EDA App
-
      This app is to make exploratory data analysis of databases using the 'ydata-profiling' library.
 
      ---
@@ -71,18 +72,18 @@ else:
         st.write("---")
         st.header("Report")
         st_profile_report(pr, navbar=True)
-    pr = ProfileReport(df)
-    report_json = pr.to_json()
-    st.download_button(
-        label="Download Report",
-        data=report_json,
-        file_name="EDA_Report.json",
-        mime="text/json",
-    )
-    report_html = pr.to_html()
-    st.download_button(
-        label="Download Report in html",
-        data=report_json,
-        file_name="EDA_Report.html",
-        mime="text/html",
-    )
+        pr = ProfileReport(df)
+        report_json = pr.to_json()
+        st.download_button(
+            label="Download Report in json",
+            data=report_json,
+            file_name="EDA_Report.json",
+            mime="text/json",
+        )
+        report_html = pr.to_html()
+        st.download_button(
+            label="Download Report in html",
+            data=report_json,
+            file_name="EDA_Report.html",
+            mime="text/html",
+        )
